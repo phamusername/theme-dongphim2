@@ -18,10 +18,6 @@ class ThemeDongphimServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__ . '/../resources/assets' => public_path('themes/dongphim')
         ], 'dongphim-assets');
-
-        $this->publishes([
-            __DIR__ . '/../resources/views/errors' => base_path('resources/views/errors')
-        ], 'dongphim-error-page');
     }
 
     protected function setupDefaultThemeCustomizer()
@@ -31,7 +27,7 @@ class ThemeDongphimServiceProvider extends ServiceProvider
                 'name' => 'Dongphimv2',
                 'author' => 'contact.animehay@gmail.com',
                 'package_name' => 'ggg3/theme-dongphim',
-                'publishes' => ['dongphim-assets', 'dongphim-error-page'],
+                'publishes' => ['dongphim-assets'],
                 'preview_image' => '',
                 'options' => [
                     [
